@@ -1,14 +1,14 @@
 pipeline {
  agent any
  environment {
- PATH = "${env.PATH};C:\\Windows\\System32" // Update the PATH to include the directory of cmd.exe
- GIT_CREDENTIALS = credentials('ADirin')
+ PATH = "${env.PATH};C:\Windows\System32" // Update the PATH to include the directory of cmd.exe
+ GIT_CREDENTIALS = credentials('teemupulli')
  }
 
  stages {
  stage('Checkout') {
  steps {
- git branch: 'master', credentialsId: 'ADirin', url: 'https://github.com/ADirin/FarToCel_Fall2024.git'
+ git branch: 'master', credentialsId: 'teemupulli', url: 'https://github.com/teemupulli/ftocelcius.git'
  }
  }
  stage('Build') {
